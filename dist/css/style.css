@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+@font-face {
+  font-family: manrope_medium;
+  src: url("../../../dist/assets/fonts/Manrope-Medium.ttf");
+}
+@font-face {
+  font-family: manrope_bold;
+  src: url("../../../dist/assets/fonts/Manrope-Bold.ttf");
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: manrope_medium;
+  font-size: 13px;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: manrope_bold;
+  font-size: 2em;
+}
+
+p,
+span {
+  font-size: 1.1em;
+  text-decoration: none;
+  hyphens: auto;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
