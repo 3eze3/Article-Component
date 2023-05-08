@@ -1,10 +1,46 @@
-// ## Typography
+@use "../abtract/varibles" as colors_fonts;
+@font-face {
+  font-family: manrope_medium;
+  src: url("../../../dist/assets/fonts/Manrope-Medium.ttf");
+}
 
-// ### Body Copy
+@font-face {
+  font-family: manrope_bold;
+  src: url("../../../dist/assets/fonts/Manrope-Bold.ttf");
+}
 
-// - Font size: 13px
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: manrope_medium;
+  font-size: 13px;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: colors_fonts.$light-grayish-blue;
+}
 
-// ### Headings
+h1 {
+  font-family: manrope_bold;
+  font-size: colors_fonts.$lg;
+  color: colors_fonts.$very-dark-grayish-blue;
+}
 
-// - Family: [Manrope](https://fonts.google.com/specimen/Manrope)
-// - Weights: 500, 700
+p,
+span {
+  font-size: colors_fonts.$md;
+  text-decoration: none;
+  hyphens: auto;
+  color: colors_fonts.$desaturated-dark-blue;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+}
