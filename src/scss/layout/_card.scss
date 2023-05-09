@@ -1,17 +1,26 @@
 @use "../abtract/mixins" as layout;
 @use "../abtract/varibles" as colors;
 .card {
-  width: 47rem;
+  width: 52rem;
   height: 20rem;
+  @include layout.flex($justify: space-between);
   border-radius: 1rem;
   background-color: colors.$white;
-  //
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  //
-  &__ {
+  &__ilustration {
+    flex: 40%;
+    height: 100%;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    overflow: hidden;
   }
-  &__ {
+  &__content {
+    flex: 60%;
+    padding-inline: 2.5rem;
+  }
+  &__information {
+    margin-bottom: 1rem;
+  }
+  &__title {
+    margin-bottom: 1rem;
   }
 }
