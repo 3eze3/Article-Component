@@ -5,3 +5,8 @@
   align-items: $aling;
   gap: $gap;
 }
+@mixin media-break($break, $point) {
+  @media screen and ($break: $point) {
+    @content;
+  }
+}
