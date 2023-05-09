@@ -28,6 +28,7 @@
   &__content {
     flex: 60%;
     padding-inline: 2.5rem;
+    position: relative;
     @include layout.media-break(max-width, 480px) {
       padding-inline: 2rem;
     }
