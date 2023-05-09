@@ -1,9 +1,13 @@
 @use "../abtract/mixins" as layout;
+@use "../abtract/varibles" as colors_bg;
 .profile {
   @include layout.flex($justify: space-between);
   padding-right: 1rem;
   &__wrapper {
     @include layout.flex($gap: 1rem);
+    @include layout.media-break(max-width, 480px) {
+      gap: 2rem;
+    }
   }
   &__photo {
     width: 2.75rem;
@@ -14,5 +18,12 @@
   }
   &__share {
     padding: 0.65rem;
+    cursor: pointer;
+    &:hover {
+      background-color: colors_bg.$grayish-blue;
+    }
+    &:hover img {
+      filter: brightness(0%) invert(1);
+    }
   }
 }
