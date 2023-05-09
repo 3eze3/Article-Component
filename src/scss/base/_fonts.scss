@@ -28,13 +28,14 @@ h1 {
   font-size: colors_fonts.$lg;
   color: colors_fonts.$very-dark-grayish-blue;
 }
-
 p,
 span {
+  font-family: manrope_medium;
   font-size: colors_fonts.$md;
   text-decoration: none;
   hyphens: auto;
   color: colors_fonts.$desaturated-dark-blue;
+  line-height: 1.5;
 }
 
 button {
@@ -43,4 +44,15 @@ button {
   display: block;
   border-radius: 50%;
   overflow: hidden;
+  background-color: colors_fonts.$light-grayish-blue;
+}
+
+.profile__information {
+  &--name {
+    font-family: manrope_bold;
+    color: colors_fonts.$very-dark-grayish-blue;
+  }
+  &--date {
+    color: colors_fonts.$grayish-blue;
+  }
 }
