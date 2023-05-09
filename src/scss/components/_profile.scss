@@ -1,0 +1,18 @@
+@use "../abtract/mixins" as layout;
+.profile {
+  @include layout.flex($justify: space-between);
+  padding-right: 1rem;
+  &__wrapper {
+    @include layout.flex($gap: 1rem);
+  }
+  &__photo {
+    width: 2.75rem;
+    border-radius: 50%;
+  }
+  &__information {
+    @include layout.flex($aling: flex-start, $direction: column, $gap: 0.15rem);
+  }
+  &__share {
+    padding: 0.65rem;
+  }
+}
