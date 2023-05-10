@@ -19,55 +19,79 @@
   &__share {
     padding: 0.65rem;
     cursor: pointer;
+    transition: 0.14s ease-in;
+    @include layout.media-break(max-width, 480px) {
+      position: relative;
+      z-index: 1;
+      top: 0.2rem;
+    }
     &:hover {
+      transition: 0.14s ease-in;
       background-color: colors_bg.$grayish-blue;
     }
     &:hover img {
       filter: brightness(0%) invert(1);
+      transition: 0.14s ease-in;
     }
   }
   &__box {
     width: 17rem;
     height: 4rem;
     padding-left: 2rem;
-    border-radius: 0.7rem;
-    //
-    display: flex;
-    align-items: center;
-    // outline: solid red 1px;
-    justify-content: space-between;
-    gap: 0.75rem;
-    //
+    @include layout.flex($justify: space-between, $gap: 0.75rem);
     position: absolute;
     bottom: 4rem;
     left: 18rem;
-    background-color: rgb(0, 255, 166);
+    background-color: colors_bg.$very-dark-grayish-blue;
+    border-radius: 0.7rem;
+    @include layout.media-break(max-width, 480px) {
+      width: 25rem;
+      height: 4rem;
+      left: 0;
+      bottom: 0;
+      @include layout.flex($justify: space-between, $gap: 2rem);
+      border-radius: 0;
+      border-bottom-left-radius: 0.7rem;
+      border-bottom-right-radius: 0.7rem;
+    }
     &::after {
       content: "";
       display: block;
       width: 5rem;
       height: 3.1rem;
       clip-path: polygon(50% 42%, 0 0, 100% 0);
-      background-color: rgb(0, 255, 166);
+      background-color: colors_bg.$very-dark-grayish-blue;
       position: relative;
       bottom: -3rem;
       left: -7.25rem;
+      @include layout.media-break(max-width, 480px) {
+        display: none;
+      }
     }
   }
 
   &__text {
     letter-spacing: 0.2em;
-    color: #fff;
+    color: colors_bg.$white;
     font-weight: 600;
   }
 
   &__social {
-    outline: solid red 1px;
-    //
     flex: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    //
+    @include layout.flex($justify: space-between);
+    @include layout.media-break(max-width, 480px) {
+      flex: 50%;
+      @include layout.flex($justify: flex-start);
+      gap: 2rem;
+    }
+  }
+  &__icon {
+    filter: brightness(100%);
+    transition: 0.15s ease;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(90%) blur(0.5px);
+      transition: 0.15s ease;
+    }
   }
 }
