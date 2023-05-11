@@ -45,11 +45,11 @@ svg {
 
 @font-face {
   font-family: manrope_medium;
-  src: url("../../../dist/assets/fonts/Manrope-Medium.ttf");
+  src: url("../assets/fonts/Manrope-Medium.ttf");
 }
 @font-face {
   font-family: manrope_bold;
-  src: url("../../../dist/assets/fonts/Manrope-Bold.ttf");
+  src: url("../assets/fonts/Manrope-Bold.ttf");
 }
 body {
   width: 100%;
