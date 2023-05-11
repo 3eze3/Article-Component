@@ -131,12 +131,108 @@ button {
 .profile__share {
   padding: 0.65rem;
   cursor: pointer;
+  transition: 0.14s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .profile__share {
+    position: relative;
+    z-index: 1;
+    top: 0.2rem;
+  }
 }
 .profile__share:hover {
+  transition: 0.14s ease-in;
   background-color: hsl(212deg, 23%, 69%);
 }
 .profile__share:hover img {
   filter: brightness(0%) invert(1);
+  transition: 0.14s ease-in;
+}
+.profile__box {
+  width: 17rem;
+  height: 4rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 18rem;
+  background-color: hsl(217deg, 19%, 35%);
+  border-radius: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.profile__box--active {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+@media screen and (max-width: 480px) {
+  .profile__box {
+    width: 25rem;
+    height: 4rem;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+}
+.profile__box::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 3.1rem;
+  clip-path: polygon(50% 42%, 0 0, 100% 0);
+  background-color: hsl(217deg, 19%, 35%);
+  position: relative;
+  bottom: -3rem;
+  left: -7.25rem;
+}
+@media screen and (max-width: 480px) {
+  .profile__box::after {
+    display: none;
+  }
+}
+.profile__text {
+  letter-spacing: 0.2em;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+}
+.profile__social {
+  flex: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+@media screen and (max-width: 480px) {
+  .profile__social {
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    gap: 2rem;
+  }
+}
+.profile__icon {
+  filter: brightness(100%);
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+.profile__icon:hover {
+  filter: brightness(90%) blur(0.5px);
+  transition: 0.15s ease;
 }
 
 .card {
@@ -180,6 +276,7 @@ button {
 .card__content {
   flex: 60%;
   padding-inline: 2.5rem;
+  position: relative;
 }
 @media screen and (max-width: 480px) {
   .card__content {
